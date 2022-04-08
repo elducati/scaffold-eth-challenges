@@ -50,7 +50,7 @@ const { ethers } = require("ethers");
 */
 
 /// 📡 What chain are your contracts deployed to?
-const targetNetwork = NETWORKS.localhost; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
+const targetNetwork = NETWORKS.rinkeby; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
 
 // 😬 Sorry for all the console logging
 const DEBUG = true;
@@ -495,7 +495,7 @@ function App(props) {
               Staker UI
             </Link>
           </Menu.Item>
-          <Menu.Item key="/contracts">
+          {/* <Menu.Item key="/contracts">
             <Link
               onClick={() => {
                 setRoute("/contracts");
@@ -504,7 +504,7 @@ function App(props) {
             >
               Debug Contracts
             </Link>
-          </Menu.Item>
+          </Menu.Item> */}
         </Menu>
 
         <Switch>

@@ -22,7 +22,7 @@ contract Staker {
   uint256 public constant threshold = 1 ether;
 
   // Staking deadline
-  uint256 public deadline = block.timestamp + 30 seconds;
+  uint256 public deadline = block.timestamp + 72 hours;
 
   // Contract's Events
   event Stake(address indexed sender, uint256 amount);
@@ -60,7 +60,7 @@ contract Staker {
     exampleExternalContract = ExampleExternalContract(exampleExternalContractAddress);
   }
 
-  function execute() public stakeNotCompleted deadlineReached(false) {
+  function execute() public stakeNotCompleted {
     uint256 contractBalance = address(this).balance;
 
     // check the contract has enough ETH to reach the treshold
